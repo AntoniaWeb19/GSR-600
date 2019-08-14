@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#calcular').click(function(){
+                var parametros = {
+                    'ValorCaja1':$('#valor1').val()
+                  
+                };
+               $.ajax({
+                   data : parametros,
+                   url : '018_Ejercicio.php',
+                   type : 'POST',
+                   beforeSend : function(){
+                       $('#resultado').html("Procesado, Espere por favor !!")
+                   },
+                   success : function(response){
+                       $('#resultado').html(response);
+                   }
+               });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Hallar el mayor y menor de tres numeros</h1>
+    <label for="">Intruzca Numero</label>
+     <input id="valor1" type="text" name="caja_texto" value="0"><br> 
+     <label for="">Intruzca Numero</label>
+     <input id="valor1" type="text" name="caja_texto" value="0"><br> 
+     <label for="">Intruzca Numero</label>
+     <input id="valor1" type="text" name="caja_texto" value="0"><br> 
+    
+    
+    <input id="calcular" type="button"  value="Verificar"><br> 
+    <span id="resultado">0</span>   
+</body>
+</html>
