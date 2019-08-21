@@ -9,7 +9,7 @@
 <body>
 <h1>Practica 3</h1>
      <h2>Escribe un programa que muestre por pantalla 10 palabras en Ingles y Español.</h2>
-   <table>
+   <table border=1> 
      <tr>
         <th>Numero</th>
         <th>Español</th>
