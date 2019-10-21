@@ -1,0 +1,11 @@
+body{
+    text-align: justify;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 14px;
+    color: #757E82;
+
+}
+#content {
+    clear: left;
+    padding: 20xp;
+}
